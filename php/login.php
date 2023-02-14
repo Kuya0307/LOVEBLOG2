@@ -14,7 +14,7 @@ $stm = $pdo->prepare($sql);
 $stm->bindValue(':name',$name,PDO::PARAM_STR);
 $stm->execute();
 $membar = $stm->fetch(PDO::FETCH_ASSOC);
-
+$_SESSION['name'] = $name;
 $data = array(
     'name' => $membar['name'],
     'pass_hash' => $membar['pass_hash']
