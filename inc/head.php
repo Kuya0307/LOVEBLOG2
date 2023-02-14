@@ -12,6 +12,6 @@
     <p class="user"><?php echo $_SESSION['name']; ?></p>
     <p class="log">でログイン中</p>
     </div>
-    <button class="button">ログアウト</button>
+    <button class="button" onclick="location.href='./logout.php'">ログアウト</button>
   </header>
 </html>
