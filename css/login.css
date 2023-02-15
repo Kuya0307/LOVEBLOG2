@@ -1,0 +1,77 @@
+@charset "utf-8";
+body{
+    background-color: #F5C3C2;
+}
+.box {
+    padding: 1em 1em;
+    margin-top: 5vh;
+    margin-left: 38%;
+    margin-right: 38%;
+    font-weight: bold;
+    border: solid 1px #000000;
+    display: inline-block;
+    background-color: white;
+}
+.box h1 {
+    text-align: center;
+    margin: 0; 
+    padding: 0;
+}
+.usr{
+    text-align: center;
+}
+.usrbox{
+    margin-left: 14%;
+    width: 70%;
+    padding: 2%;
+}
+.pw{
+    text-align: center;
+}
+.pwbox{
+    margin-left: 14%;
+    width: 70%;
+    padding: 2%;
+}
+.log{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 10%;
+}
+.logbtn{
+    background-color: #B8C9F6;
+    border: 1px solid #B8C9F6;
+    width: 100%;
+    padding: 6%;
+}
+
+.box-005 {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 2px solid #f06060;
+    border-radius: 5px;
+    color: #333333;
+}
+
+.box-005 div {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    top: -13px;
+    left: 10px;
+    margin: 0 7px;
+    padding: 0 8px;
+    background: #fff;
+    color: #f06060;
+    font-weight: 600;
+    vertical-align: top;
+}
+
+.box-005 svg {
+    padding-right: 4px;
+}
+
+.box-005 p {
+    margin: 0;
+    padding: 0 1.5em 1em;
+}
