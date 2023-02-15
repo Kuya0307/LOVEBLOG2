@@ -21,7 +21,7 @@
         $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
         //例外がスルーされるようにする
         $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-        echo "データベースに接続しました";
+        echo "";
     }catch(exception $e){
         echo "DB接続エラー:";
         echo $e->getmessage();
