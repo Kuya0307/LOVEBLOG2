@@ -1,0 +1,36 @@
+body {
+    background-color:#f5c3c2;
+}
+.txt{
+    display: inline-block;
+    width: 100%;
+    padding: 1.5em;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    background: #ffffff;
+    margin: 0.5em 0;
+    position: relative;
+    top: 0px;
+    left: 120px;
+}
+.txt2{
+    display: inline-block;
+    width: 80%;
+    padding: 1.5em;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    background: #ffffff;
+    margin: 0.5em 0;
+    position: relative;
+    top: 0px;
+    left: 120px;
+}
+input[type="text"]{
+    text-align: center;
+    font-size: 120%;
+}
+.botton{
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
