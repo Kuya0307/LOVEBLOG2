@@ -21,7 +21,7 @@ $data = array(
   );
 var_dump(password_verify($pw,$data['pass_hash']));
   if(password_verify($pw,$data['pass_hash'])){
-    header('Location:top.php');
+    header('Location:table.php');
     exit;
     }else{
       $error = true;

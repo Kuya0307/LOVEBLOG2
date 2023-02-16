@@ -1,5 +1,6 @@
 <?php
     require_once 'db_connect.php';
+include '../inc/head.php';
 
     $sql = "select ID,title,state_flag from report where delete_flag = 0;";
     $stm = $pdo->prepare($sql);
@@ -32,10 +33,10 @@
 <?php
   foreach($result as $data){
 
-    if($data['state_flag'] == 0){
+    if($data['state_flag'] == 1){
         $check = "checked";
 
-    }if($data['state_flag'] == 1){
+    }if($data['state_flag'] == 0){
         $check = "";
     }
 
@@ -65,12 +66,13 @@
                 <span id="title{$data['ID']}"> {$states} </span>
             </label> 
             </td>
-            <td><a href="update.php?ID={$data['ID']}">編集</a></td>
+            <td><a href="upform.php?ID={$data['ID']}">編集</a></td>
             <td><button class="del_btn" data-id="{$data['ID']}">削除</button></td>
         </tr>
         EOD;
     }
     ?>
+    <a href="post.php">投稿</a>
  
 </table>
 
@@ -97,18 +99,6 @@
     }
     
 
-    // btn.addEventListener('click', function() {
-    //     var result = window.confirm('ボタンをクリック！');
-    //     console.log(result);
-    //     if( result ) {
-    //     //OKを押して遷移させる
-    //         window.location.href = "../php/delete.php?id="+btn.dataset.id;
-    //     }else {
-    //     //キャンセルを押してリダイレクトさせる
-    //         return false;
-    //     }
-    // })
-
     // トグルボタン表示切替
     let checkbox = document.getElementsByClassName('up_state')
     let id
@@ -119,29 +109,13 @@
             let title = document.getElementById('title'+id);
             title.textContent = checkbox[i].checked ? '公開' : '非公開';
             if (checkbox[i].checked) {
-                window.location.href = "../php/state2.php?id="+id;
-            } else {
                 window.location.href = "../php/state.php?id="+id;
+            } else {
+                window.location.href = "../php/state2.php?id="+id;
             }
         });
     }
     
-    // const checkbox = document.getElementById('switch');
-    // checkbox.addEventListener('click', () => {
-    //     const title = document.querySelector('.title');
-    //     title.textContent = checkbox.checked ? '公開' : '非公開';
-    // });
-
-    // 公開非公開の処理
-    // let id
-    // function foo(id) {
-    //     console.log(id)
-    //     if (document.getElementById("switch").checked) {
-    //         //window.location.href = "../php/state2.php?id="+id;
-    //     } else {
-    //         //window.location.href = "../php/state.php?id="+id;
-    //     }
-    // }
 
 </script>
 </body>
