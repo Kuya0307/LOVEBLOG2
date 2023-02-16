@@ -87,8 +87,8 @@
         console.log(result);
         if( result ) {
         //OKを押して遷移させる
-            //window.location.href = "../php/delete.php?id="+btn[i].dataset.id;
-            console.log("../php/delete.php?id="+btn[i].dataset.id)
+            window.location.href = "../php/delete.php?id="+btn[i].dataset.id;
+            // console.log("../php/delete.php?id="+btn[i].dataset.id)
         }else {
         //キャンセルを押してリダイレクトさせる
             return false;
