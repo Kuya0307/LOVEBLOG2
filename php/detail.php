@@ -1,5 +1,6 @@
 <?php
 require_once 'db_connect.php';
+include 'inc/headout.php';
  $ID=$_GET['ID'];
 $sql="select * from report where id = :ID";
 //前へボタン
@@ -48,3 +49,4 @@ if($gab){
 <br>
 <a href="detail.php?ID=<?php echo $data3['id'];?>">前のページへ</a>
 <a href="detail.php?ID=<?php echo $data2['id'];?>">次のページへ</a>
+<a href="index.php">一覧へ戻る</a>
