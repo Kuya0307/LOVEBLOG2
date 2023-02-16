@@ -17,4 +17,4 @@ echo "<pre>";
     $stm->bindValue(':user_name',$name,PDO::PARAM_STR);
     $stm->execute();
     $reg=$stm->fetch(PDO::FETCH_ASSOC);
-    header('Location:wia.php');
+    header('Location:table.php');
