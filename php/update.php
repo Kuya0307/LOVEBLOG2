@@ -15,4 +15,4 @@ $stm->bindValue(':content',$content,PDO::PARAM_STR);
 $stm->bindValue(':id',$ID,PDO::PARAM_INT);
 $stm->execute();
 $upd = $stm->fetch(PDO::FETCH_ASSOC);
-header('Location:top.php');
+header('Location:table.php');
