@@ -1,7 +1,7 @@
 <?php
 require_once 'db_connect.php';
 session_start();
-include '../inc/headout.php';
+include '../inc/headlog.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
