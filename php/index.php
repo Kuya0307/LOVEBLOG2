@@ -12,15 +12,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
+    <div class="content">
 <table border="1">
         <tr>
-            <th>タイトル</th>
-            <th>ユーザーネーム</th>
+            <!-- <th>タイトル</th>
+            <th>ユーザーネーム</th> -->
         </tr>
 
 <?php
@@ -34,6 +36,6 @@
     }
     ?>
  </table>
-
+</div>
 </body>
 </html>

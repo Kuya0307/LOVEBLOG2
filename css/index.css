@@ -1,0 +1,50 @@
+/* コンテンツ幅 */
+.content {
+    max-width: 80%;
+    margin: 0 auto;
+    /* background-color:#fafafa; */
+  }
+/* aタグ処理 */
+  a:hover{
+    color:#a9cce6;
+  }
+
+   /* テーブル位置調整 */
+   table {
+    border-collapse:  collapse; 
+}
+ 
+th {
+    width:  300px;              
+    height: 80px;               
+}
+td {
+    text-align:  center;        
+     width:  300px;              
+    height: 50px;  
+}
+
+  /* テーブルタグ */
+  table{
+    border-collapse:separate;
+    border-spacing: 5px;
+    width: 100%;
+  }
+  
+  table th,table td{
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* table th{
+    background-color: #c79852;
+    color: white;
+    border:solid 1px #927141;
+  } */
+  
+  table td{
+    border:solid 1px #af9d85;
+  }
+
+ 
