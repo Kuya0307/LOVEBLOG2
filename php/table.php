@@ -22,12 +22,13 @@ include '../inc/head.php';
 </header>
 
 <body>
-<table border="1">
+    <div class="content">
+<table>
         <tr>
-            <th>タイトル</th>
+            <!-- <th>タイトル</th>
             <th>公開非公開</th>
             <th>編集</th>
-            <th>削除</th>
+            <th>削除</th> -->
         </tr>
 
 <?php
@@ -118,5 +119,6 @@ include '../inc/head.php';
     
 
 </script>
+</div>
 </body>
 </html>
