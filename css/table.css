@@ -48,10 +48,10 @@
     margin: 0 auto;
     /* background-color:#fafafa; */
   }
-/* aタグ処理 */
-  a:hover{
+   /*aタグ処理 */
+   a:hover{
     color:#a9cce6;
-  }
+}
 
    /* テーブル位置調整 */
    table {
@@ -109,4 +109,7 @@ span{
     /* border-radius: 5px; デザインによる */
   }
 
+  .column{
+      pointer-events: none;
+  }
  
