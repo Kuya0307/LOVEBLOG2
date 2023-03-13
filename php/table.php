@@ -1,8 +1,8 @@
 <?php
     require_once 'db_connect.php';
-include '../inc/head.php';
+    include '../inc/head.php';
 
-    $sql = "select ID,title,state_flag from report where delete_flag = 0;";
+    $sql = "select ID,title,state_flag,create_at from report where delete_flag = 0;";
     $stm = $pdo->prepare($sql);
     $stm->execute();
     $result = $stm->fetchAll(PDO::FETCH_ASSOC);
@@ -46,7 +46,7 @@ include '../inc/head.php';
     }
 
     if( $states == "公開"){
-        $backcolor = "";
+        $backcolor = "#ffffff";
 
     }else{
         $backcolor = "#d3d3d3";
@@ -66,11 +66,13 @@ include '../inc/head.php';
             </td>
             <td><a href="upform.php?ID={$data['ID']}">編集</a></td>
             <td><button class="del_btn" data-id="{$data['ID']}">削除</button></td>
+            <td>{$data['create_at']}</td>
         </tr>
         EOD;
     }
     ?>
-    <a href="post.php">投稿</a>
+        <a href="post.php" style="text-decoration:none;" class="btn_item">投稿</a>
+
  
 </table>
 </main>
