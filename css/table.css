@@ -1,5 +1,5 @@
 /* トグルボタンのCSS */
-.switch_label {
+#post .switch_label {
     position: relative;
   }
   
@@ -9,14 +9,14 @@
     height: 0;
   }
 
-  .base {
+  #post .base {
     width: 56px;
     border-radius: 16px;
     height: 32px;
     background-color: #ddd;
   }
 
-  .title {
+  #post .title {
     margin-left: 4px;
   }
 
@@ -24,7 +24,7 @@
     background-color: rgb(219, 234, 254);
   }
 
-  .circle {
+  #post .circle {
     position: absolute;
     top: 4px;
     left: 4px;
@@ -34,7 +34,7 @@
     background-color: white;
   }
 
-  .switch {
+  #post .switch {
     position: relative;
   }
 
@@ -43,7 +43,7 @@
     background-color: blue;
   }
 /* コンテンツ幅 */
-  .content {
+#post .content {
     max-width: 80%;
     margin: 0 auto;
     /* background-color:#fafafa; */

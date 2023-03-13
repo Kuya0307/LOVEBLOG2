@@ -1,3 +1,6 @@
+body{
+  background-color: #f5c3c2;
+}
 /* コンテンツ幅 */
 .content {
     max-width: 80%;
