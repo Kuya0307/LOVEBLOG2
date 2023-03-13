@@ -37,16 +37,20 @@ if($gab){
 }
 ?>
 <html>
+  <link rel="stylesheet" href="../css/detail.css">
+  <body>
   <br>
   <form action="post2.php" method="post">
 <label for="story">タイトル</label>
 
-<input type="text"name="title"value="<?php echo $data['title'];?>"><br>
+<input type="text"name="title"value="<?php echo $data['title'];?>" readonly><br>
 <textarea id="story" name="content"
-      rows="30" cols="100" placeholder="投稿内容を入力してください。">
+      rows="30" cols="100" placeholder="投稿内容を入力してください。" readonly>
 <?php echo $data['content'];?>
 </textarea>
 <br>
 <a href="detail.php?ID=<?php echo $data3['id'];?>">前のページへ</a>
 <a href="detail.php?ID=<?php echo $data2['id'];?>">次のページへ</a>
 <a href="index.php">一覧へ戻る</a>
+</body>
+</html>

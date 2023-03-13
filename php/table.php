@@ -17,6 +17,7 @@ include '../inc/head.php';
     <link rel="stylesheet" href="../css/table.css">
     <title>Document</title>
 </head>
+<main id="post">
 <body>
     <div class="content">
 <table>
@@ -72,6 +73,7 @@ include '../inc/head.php';
     <a href="post.php">投稿</a>
  
 </table>
+</main>
 
 <script type="text/javascript">
     // ダイアログ表示
