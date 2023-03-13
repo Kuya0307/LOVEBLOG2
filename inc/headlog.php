@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Header Sample</title>
-  <link rel="stylesheet" href="../css/headout.css">
+  <link rel="stylesheet" href="../css/headlog.css">
 </head>
   <header>
     <img class="aicon" src="../img/aicon.png" alt="">

@@ -10,7 +10,9 @@ if(!isset($_SESSION)){
   <meta charset="UTF-8">
   <title>Header Sample</title>
   <link rel="stylesheet" href="../css/head.css">
+  <link rel="stylesheet" href="../css/update.css">
 </head>
+<body>
   <header>
     <img class="aicon" src="../img/aicon.png" alt="">
     <h1 class="title">JYOBILOVE</h1>
@@ -20,4 +22,3 @@ if(!isset($_SESSION)){
     </div>
     <button class="button" onclick="location.href='./logout.php'">ログアウト</button>
   </header>
-</html>

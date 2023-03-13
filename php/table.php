@@ -17,10 +17,6 @@ include '../inc/head.php';
     <link rel="stylesheet" href="../css/table.css">
     <title>Document</title>
 </head>
-
-<header>
-</header>
-
 <body>
     <div class="content">
 <table>

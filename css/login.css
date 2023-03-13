@@ -5,8 +5,8 @@ body{
 .box {
     padding: 1em 1em;
     margin-top: 5vh;
-    margin-left: 38%;
-    margin-right: 38%;
+    margin-left: 43%;
+    /* margin-right: 43%; */
     font-weight: bold;
     border: solid 1px #000000;
     display: inline-block;

@@ -2,7 +2,10 @@
 require_once 'db_connect.php';
 session_start();
 include '../inc/head.php';
-
+if(isset($_SESSION['null_error'])){
+ echo $_SESSION['null_error'];
+  unset($_SESSION['null_error']);
+}
 $ID = $_GET['ID'];
 $_SESSION['ID'] = $ID;
 $sql = "select * from report where id = :id";
@@ -15,20 +18,22 @@ $data = array(
     'content' => $upd['content']
   );
 ?>
-<html>
+<!-- <html> -->
   <link rel="stylesheet" href="../css/update.css">
-  <body>
-    <form action="update.php" method="post">
-      <input type="text" name="title" class="textbox" value="<?php echo $data['title']; ?>"><br>
-<textarea id="story" name="content" rows="30" cols="100" class="area" placeholder="投稿内容を入力してください。" ><?php echo $data['content']; ?></textarea>
-<button type="reset" class="reset">
-<img src="../img/gomi.png" width="100px" height="100px">
-</button><br>
-<div class="two">
-  <button type="submit" class="up"> 編集 </button>
-</form>
-<button id="btn" class="can">キャンセル</button>
-</div>
+  <!-- <body> -->
+    <main id="upform">
+      <form action="update.php" method="post">
+        <input type="text" name="title" class="textbox" value="<?php echo $data['title']; ?>"><br>
+        <textarea id="story" name="content" rows="30" cols="100" class="area" placeholder="投稿内容を入力してください。" ><?php echo $data['content']; ?></textarea>
+        <button type="reset" class="reset">
+          <img src="../img/gomi.png" width="100px" height="100px">
+        </button><br>
+        <div class="two">
+          <button type="submit" class="up"> 編集 </button>
+          <button id="btn" class="can">キャンセル</button>
+        </div>
+      </form>
+    </main>
 
 <script>
   var btn = document.getElementById('btn');
@@ -38,10 +43,10 @@ btn.addEventListener('click', function() {
   
   if( result ) {
         //OKを押して遷移させる
-        window.location.href = '../php/top.php';
+        window.location.href = 'php/table.php';
     }else {
         //キャンセルを押してリダイレクトさせる
-        window.location.href = 'upform.php?ID=<?php echo $ID ?>';
+        window.location.href = '../php/upform.php?ID=<?php echo $ID ?>';
       }
 })
 </script>

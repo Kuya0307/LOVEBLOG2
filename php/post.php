@@ -1,14 +1,12 @@
 <?php
 include '../inc/head.php';
+require_once 'db_connect.php'
 ?>
 <head>
 <link rel="stylesheet" href="../css/post.css">
 <title>記事登録</title>
 </head>
-<?php
-require_once 'db_connect.php'
-?>
-<html>
+<main id="post">
 <body>
   <br>
   <form action="post2.php" method="post">
@@ -28,6 +26,7 @@ require_once 'db_connect.php'
 </button>
 </form>
 <button id="btn">キャンセル</button>
+</main>
 
 
 
@@ -39,7 +38,7 @@ btn.addEventListener('click', function() {
     
     if( result ) {
         //OKを押して遷移させる
-        window.location.href = '../php/wia.php';
+        window.location.href = '../php/table.php';
     }else {
         //キャンセルを押してリダイレクトさせる
         window.location.href = '../php/post.php';
@@ -51,4 +50,3 @@ btn.addEventListener('click', function() {
   
 </button>
 </body>
-</html>

@@ -1,6 +1,6 @@
 <?php
 require_once 'db_connect.php';
-include '../inc/head.php';
+include '../inc/headout.php';
  $ID=$_GET['ID'];
 $sql="select * from report where id = :ID";
 //前へボタン
