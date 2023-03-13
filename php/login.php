@@ -25,7 +25,7 @@ var_dump(password_verify($pw,$data['pass_hash']));
     exit;
     }else{
       $error = true;
-      $_SESSION['err_msg'] = "ユーザー名またはパスワードが間違っています";
+      $_SESSION['err_msg'] = "ユーザー名または"."<br/>"."パスワードが間違っています";
     }
     if($error){
       header('Location:loginform.php');
