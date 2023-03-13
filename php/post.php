@@ -8,24 +8,26 @@ require_once 'db_connect.php'
 </head>
 <main id="post">
 <body>
-  <br>
   <form action="post2.php" method="post">
-<input type="text"class="txt" style="width: 80%; height: 50%;" value="タイトル" name = "title"><br>
+<input type="text"class="txt" value="タイトル" name = "title"><br>
 <textarea id="story" name="content" class="txt2"
           rows="30" cols="100" placeholder="投稿内容を入力してください。">
 </textarea>
-<button type="reset">
+<button type="reset" class="reset">
 <img src="../img/gomi.png" width="100px" height="100px">
 </button>
+<br>
+<div class="two">
       <input type="radio"class="botton"checked name="flag"value="1">公開
-      <input type="radio" name="flag"value="0">非公開
-
-
-    <button class="favorite styled"
+      <input type="radio"class="botton2"name="flag"value="0">非公開
+</div>
+    <div class="one">
+    <button class="up"
         type="submit">  投稿
+        <button id="btn" class="can">キャンセル
+</div>
 </button>
 </form>
-<button id="btn">キャンセル</button>
 </main>
 
 
