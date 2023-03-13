@@ -1,7 +1,7 @@
 <?php
     require_once 'db_connect.php';
     include '../inc/headout.php';
-    $sql = "select ID,title,user_name from report where state_flag=1 and delete_flag=0";
+    $sql = "select ID,title,user_name,create_at from report where state_flag=1 and delete_flag=0";
     $stm = $pdo->prepare($sql);
     $stm->execute();
     $result = $stm->fetchAll(PDO::FETCH_ASSOC);
@@ -19,18 +19,20 @@
 
 <body>
     <div class="content">
-<table border="1">
+<table>
         <tr>
             <!-- <th>タイトル</th>
-            <th>ユーザーネーム</th> -->
+            <th>名前</th>
+            <th>投稿日時</th> -->
         </tr>
 
 <?php
     foreach($result as $data){
         echo <<<"EOD"
         <tr>
-            <td> <a href="detail.php?ID={$data['ID']}">{$data['title']}</a></td>
-            <td>{$data['user_name']}</a></td>
+            <td> <a href="detail.php?ID={$data['ID']}" style="text-decoration:none;" >{$data['title']}</a></td>
+            <td>{$data['user_name']}</td>
+            <td>{$data['create_at']}</td>
         </tr>
         EOD;
     }

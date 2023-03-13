@@ -98,4 +98,15 @@ span{
     border:solid 1px #af9d85;
   }
 
+  /* 投稿ボタンのcss */
+  .btn_item {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background: #AFEEEE;;
+    border:1px solid #0000FF;
+    color: #000000;
+    /* border-radius: 5px; デザインによる */
+  }
+
  
