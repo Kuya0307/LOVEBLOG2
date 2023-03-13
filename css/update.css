@@ -2,38 +2,38 @@
 body{
     background-color: #F5C3C2;
 }
-.textbox{
+#upform .textbox{
     width: 80%;
     padding: 3%;
     margin-top: 3%;;
     margin-left: 7%;
     margin-right: 7%;
 }
-input[type="text"]{
+#upform .input[type="text"]{
     font-size:xx-large;
     text-align: center;
 }
-.area{
+#upform .area{
     width: 70%;
     margin-top: 3%;;
     margin-left: 14%;
 }
-.reset{
+#upform .reset{
     background-color: white;
     border: 1px solid black;
 }
-.two{
+#upform .two{
     padding-left: 34%;
     margin-top: 2%;
 }
-.up{
+#upform .up{
     background-color: white;
     border: 1px solid black;
     width: 10%;
     padding: 2%;
     margin-right: 20%;
 }
-.can{
+#upform .can{
     background-color: white;
     border: 1px solid black;
     width: 14%;

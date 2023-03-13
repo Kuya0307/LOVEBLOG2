@@ -1,7 +1,7 @@
 body {
     background-color:#f5c3c2;
 }
-.txt{
+#post .txt{
     display: inline-block;
     width: 100%;
     padding: 1.5em;
@@ -13,7 +13,7 @@ body {
     top: 0px;
     left: 120px;
 }
-.txt2{
+#post .txt2{
     display: inline-block;
     width: 80%;
     padding: 1.5em;
@@ -25,11 +25,11 @@ body {
     top: 0px;
     left: 120px;
 }
-input[type="text"]{
+#post input[type="text"]{
     text-align: center;
     font-size: 120%;
 }
-.botton{
+#post .botton{
     position: relative;
     top: 0px;
     left: 0px;
