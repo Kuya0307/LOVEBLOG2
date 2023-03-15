@@ -9,7 +9,7 @@ require_once 'db_connect.php'
 <main id="post">
 <body>
   <form action="post2.php" method="post">
-<input type="text"class="txt" value="タイトル" name = "title"><br>
+<input type="text"class="txt" placeholder="タイトル" name = "title"><br>
 <textarea id="story" name="content" class="txt2"
           rows="30" cols="100" placeholder="投稿内容を入力してください。">
 </textarea>
