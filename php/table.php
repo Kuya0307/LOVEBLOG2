@@ -1,8 +1,11 @@
 <?php
     require_once 'db_connect.php';
     include '../inc/head.php';
+    if(!isset($_SESSION)){
+        session_start();
+      }
 
-    $sql = "select ID,title,state_flag,create_at from report where delete_flag = 0;";
+    $sql = "select ID,title,state_flag,create_at from report where delete_flag = 0 and user_name=$_SESSION['name'];";
     $stm = $pdo->prepare($sql);
     $stm->execute();
     $result = $stm->fetchAll(PDO::FETCH_ASSOC);
