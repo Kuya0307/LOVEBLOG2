@@ -1,3 +1,17 @@
-body{
+#detail .body{
     background-color: #F5C3C2;
   }
+#detail .god{
+  width: 30%;
+  text-align: center;
+}
+#detail .oda{
+    margin-left: 30%;
+  }
+  #story{
+    width: 70%;
+  }
+
+
+
+
