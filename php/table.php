@@ -53,7 +53,7 @@
     }
     echo <<<"EOD"
         <tr bgcolor={$backcolor}>
-            <td> <a href="detail.php?ID={$data['ID']}">{$data['title']}</a></td>
+            <td> <a href="detail.php?ID={$data['ID']}"style="text-decoration:none;">{$data['title']}</a></td>
             <td>
             <label for="switch{$data['ID']}" class="switch_label">
                 <div class="switch">
@@ -64,16 +64,18 @@
                 <span id="title{$data['ID']}"> {$states} </span>
             </label> 
             </td>
-            <td><a href="upform.php?ID={$data['ID']}">編集</a></td>
-            <td><button class="del_btn" data-id="{$data['ID']}">削除</button></td>
+            <td><a href="upform.php?ID={$data['ID']}"><img src="../img/ppen.png" width="40px" height="29px"></a></td>
+            <td><button class="del_btn" data-id="{$data['ID']}"><img src="../img/gomi.png" width="30px" height="30px"></button></td>
             <td>{$data['create_at']}</td>
         </tr>
         EOD;
     }
     ?>
         <a href="post.php" style="text-decoration:none;" class="btn_item">投稿</a>
+        <a style="position:relative;left: 473px;" class="column">編集</a>
+        <a style="position:relative;left: 666px;" class="column">削除</a>
+        <a style="position:relative;left: 845px;" class="column">投稿日時</a>
 
- 
 </table>
 </main>
 

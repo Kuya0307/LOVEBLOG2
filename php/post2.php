@@ -8,7 +8,7 @@ echo "<pre>";
     $title=$_POST['title'];
     $content=$_POST['content'];
     $state_flag=$_POST['flag'];
-    $name="おだくう";
+    $name=$_SESSION['name'];
     $sql="INSERT INTO report (title,content,state_flag,user_name,delete_flag) VALUES(:title,:content,:state_flag,:user_name,0)";
     $stm=$pdo->prepare($sql);
     $stm->bindValue(':title',$title,PDO::PARAM_STR);
