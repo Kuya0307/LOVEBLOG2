@@ -1,4 +1,5 @@
-<?php
+
+</html><?php
 require_once 'db_connect.php';
 session_start();
 include '../inc/headlog.php';
@@ -43,6 +44,9 @@ include '../inc/headlog.php';
             </div>
         </form>
     </div>
-    
+    <p class="info">アカウントを持っていない方</p>
+    <form action="regform.php" method="post">
+        <input type="submit" class="regbtn" value="アカウントを作成する">
+    </form>
 </body>
 </html>
