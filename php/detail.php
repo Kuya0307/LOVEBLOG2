@@ -1,6 +1,6 @@
 <?php
 require_once 'db_connect.php';
-include '../inc/headout.php';
+include '../inc/head.php';
  $ID=$_GET['ID'];
 $sql="select * from report where id = :ID";
 //前へボタン
@@ -38,19 +38,23 @@ if($gab){
 ?>
 <html>
   <link rel="stylesheet" href="../css/detail.css">
+  <main id="detail">
   <body>
+    <div class="oda">
   <br>
   <form action="post2.php" method="post">
 <label for="story">タイトル</label>
 
-<input type="text"name="title"value="<?php echo $data['title'];?>" readonly><br>
-<textarea id="story" name="content"
-      rows="30" cols="100" placeholder="投稿内容を入力してください。" readonly>
-<?php echo $data['content'];?>
-</textarea>
+<input type="text" class="god" name="title"value="<?php echo $data['title'];?>" readonly><br>
+<!-- <textarea id="story" name="content"
+      rows="30" cols="100" placeholder="投稿内容を入力してください。" readonly> -->
+<p class="cont"><?php echo $data['content'];?></p>
+<!-- </textarea> -->
 <br>
 <a href="detail.php?ID=<?php echo $data3['id'];?>">前のページへ</a>
 <a href="detail.php?ID=<?php echo $data2['id'];?>">次のページへ</a>
-<a href="index.php">一覧へ戻る</a>
+<a href="table.php">一覧へ戻る</a>
+</div>
+</main>
 </body>
 </html>
