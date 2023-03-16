@@ -29,7 +29,7 @@
 <?php
     foreach($result as $data){
         echo <<<"EOD"
-        <tr>
+        <tr bgcolor=#ffffff>
             <td> <a href="detail.php?ID={$data['ID']}" style="text-decoration:none;" >{$data['title']}</a></td>
             <td>{$data['user_name']}</td>
             <td>{$data['create_at']}</td>
