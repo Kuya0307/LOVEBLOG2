@@ -1,3 +1,6 @@
+<?php
+function render_header($css_path) {
+  echo <<<EOF
 <!doctype html>
 <html lang="ja">
 <head>
@@ -11,3 +14,5 @@
     <button class="button" onclick="location.href='loginform.php'">ログイン</button>
   </header>
 </html>
+EOF
+}

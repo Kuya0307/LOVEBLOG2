@@ -1,11 +1,12 @@
 <?php
 include '../inc/head.php';
 require_once 'db_connect.php'
+render_header("../css/post.css");
 ?>
-<head>
+<!-- <head>
 <link rel="stylesheet" href="../css/post.css">
 <title>記事登録</title>
-</head>
+</head> -->
 <main id="post">
 <body>
   <br>

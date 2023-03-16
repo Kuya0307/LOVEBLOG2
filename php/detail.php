@@ -6,6 +6,7 @@ include '../inc/head.php';
 }elseif(empty($_SESSION['name'])){
   include '../inc/headout.php';
 }
+render_header("../css/detail.css");
  $ID=$_GET['ID'];
 $sql="select * from report where id = :ID";
 //前へボタン
@@ -42,7 +43,7 @@ if($gab){
 }
 ?>
 <html>
-  <link rel="stylesheet" href="../css/detail.css">
+  <!-- <link rel="stylesheet" href="../css/detail.css"> -->
   <main id="detail">
   <body>
     <div class="oda">
