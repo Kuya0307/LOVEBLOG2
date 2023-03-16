@@ -1,6 +1,11 @@
 <?php
+session_start();
 require_once 'db_connect.php';
+if(!empty($_SESSION['name'])){
 include '../inc/head.php';
+}elseif(empty($_SESSION['name'])){
+  include '../inc/headout.php';
+}
  $ID=$_GET['ID'];
 $sql="select * from report where id = :ID";
 //前へボタン
@@ -53,7 +58,13 @@ if($gab){
 <br>
 <a href="detail.php?ID=<?php echo $data3['id'];?>">前のページへ</a>
 <a href="detail.php?ID=<?php echo $data2['id'];?>">次のページへ</a>
-<a href="table.php">一覧へ戻る</a>
+<?php  
+if(!empty($_SESSION['name'])){
+  $url="table.php";
+}else if(empty($_SESSION['name'])){
+  $url="index.php";
+}?>
+<a href=<?php echo $url?>>一覧へ戻る</a>
 </div>
 </main>
 </body>
