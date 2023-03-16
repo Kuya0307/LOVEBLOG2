@@ -12,7 +12,9 @@
     $result = $stm->fetchAll(PDO::FETCH_ASSOC);
 
     if(empty($result)){
-    $nullresult='閲覧できる記事はありません';
+        $nullresult='<p>閲覧できる記事はありません</p>';
+    }elseif(!empty($result)){
+        $nullresult='<a></a>';
     }
 ?>
 
@@ -83,7 +85,7 @@
         <a style="position:relative;left: 473px;" class="column">編集</a>
         <a style="position:relative;left: 666px;" class="column">削除</a>
         <a style="position:relative;left: 845px;" class="column">投稿日時</a>
-        <p><?php echo $nullresult ?></p>
+        <?php echo $nullresult ?>
 </table>
 </main>
 
