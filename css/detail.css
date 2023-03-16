@@ -1,3 +1,19 @@
 body{
     background-color: #F5C3C2;
   }
+  #detail .body{
+    background-color: #F5C3C2;
+  }
+  #detail .cont{
+    background-image: url(../img/white.png);
+  }
+  #detail .god{
+  width: 30%;
+  text-align: center;
+}
+#detail .oda{
+    margin-left: 30%;
+  }
+  #story{
+    width: 70%;
+  }
