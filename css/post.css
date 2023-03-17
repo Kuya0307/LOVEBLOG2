@@ -1,36 +1,53 @@
+@charset "utf-8";
 body {
     background-color:#f5c3c2;
 }
 #post .txt{
-    display: inline-block;
-    width: 100%;
-    padding: 1.5em;
-    border: 1px solid #ffffff;
-    box-sizing: border-box;
-    background: #ffffff;
-    margin: 0.5em 0;
-    position: relative;
-    top: 0px;
-    left: 120px;
+    width: 80%;
+    padding: 3%;
+    margin-top: 3%;;
+    margin-left: 7%;
+    margin-right: 7%;
 }
 #post .txt2{
-    display: inline-block;
-    width: 80%;
-    padding: 1.5em;
-    border: 1px solid #ffffff;
-    box-sizing: border-box;
-    background: #ffffff;
-    margin: 0.5em 0;
-    position: relative;
-    top: 0px;
-    left: 120px;
+    width: 70%;
+    margin-top: 3%;;
+    margin-left: 14%;
+}
+
+#post .botton{
+margin-left: 10%;
+}
+#post .botton2{
+    margin-left: 14%;
+}
+#post .one{
+    padding-left: 34%;
+    margin-top: 2%;
+}
+#post .two{
+    padding-left: 34%;
+    margin-top: 2%;
+}
+#post .up{
+    background-color: white;
+    border: 1px solid black;
+    width: 10%;
+    padding: 2%;
+    margin-right: 20%;
+}
+#post .can{
+    background-color: white;
+    border: 1px solid black;
+    width: 14%;
+    padding: 2%;
+}
+
+#post .reset{
+    background-color: white;
+    border: 1px solid black;
 }
 #post input[type="text"]{
     text-align: center;
-    font-size: 120%;
-}
-#post .botton{
-    position: relative;
-    top: 0px;
-    left: 0px;
+    font-size: xx-large;
 }

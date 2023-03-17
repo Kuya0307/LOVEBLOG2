@@ -1,6 +1,7 @@
 <?php
     require_once 'db_connect.php';
     include '../inc/headout.php';
+    render_header("../css/index.css");
     $sql = "select ID,title,user_name,create_at from report where state_flag=1 and delete_flag=0";
     $stm = $pdo->prepare($sql);
     $stm->execute();
@@ -9,13 +10,13 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<!-- <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <link rel="stylesheet" href="../css/index.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+</head> -->
 
 <body>
     <div class="content">

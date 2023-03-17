@@ -6,13 +6,15 @@ body{
   }
   #detail .cont{
     background-image: url(../img/white.png);
+    text-align: center;
   }
   #detail .god{
-  width: 30%;
+  width: 50%;
   text-align: center;
 }
 #detail .oda{
     margin-left: 30%;
+    margin-right: 30%;
   }
   #story{
     width: 70%;

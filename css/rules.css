@@ -1,0 +1,17 @@
+body{
+    background-color:#FDE5E3 ;
+}
+.kiyaku{
+    color: black;
+}
+.inyo{
+    color: blue;
+}
+.btn{
+    background-color: #B8C9F6;
+    border: 1px solid #B8C9F6;
+    border-radius: 10px;
+    /* width: 100%; */
+    padding-left: 1%;
+    padding-right: 1%;
+}

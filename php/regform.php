@@ -6,11 +6,11 @@ include '../inc/headlog.php';
 //     echo $_SESSION['err_reg'];
 //     unset($_SESSION['err_reg']);
 // }
+render_header("../css/reg.css");
 ?>
-<head>
-    <link rel="stylesheet" href="../css/reg.css">
-</head>
 <body>
+    <main>
+        <div class="aa">
     <div class="box">
         <h1 class="regtext">アカウント作成</h1>
         <?php if(isset($_SESSION['err_reg'])){ ?>
@@ -35,9 +35,13 @@ include '../inc/headlog.php';
             <input type="text" name="name" class="namebox">
             <p class="pw">パスワード</p>
             <input type="pw" name="pw" class="pwbox">
+            <p><a href="rules.php">利用規約</a>と<a href="policy.php">プライバシーポリシー</a></p><p>に同意しますか？</p>
+            <input type="checkbox" name="agry" id="agry" value="agry">同意します
             <div class="reg">
                 <input type="submit" class="regbtn" value="作成">
             </div>    
         </form>
     </div>
+    </div>
+    </main>
 </body>

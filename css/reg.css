@@ -3,8 +3,8 @@ body{
 }
 .box {
     padding: 1em 1em;
-    margin-top: 5vh;
-    margin-left: 43%;
+    /* margin: 5vh auto 0; */
+    margin-left: 38%;
     /* margin-right: 43%; */
     font-weight: bold;
     border-radius: 10px;
