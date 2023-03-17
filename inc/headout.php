@@ -14,5 +14,5 @@ function render_header($css_path) {
     <button class="button" onclick="location.href='loginform.php'">ログイン</button>
   </header>
 </html>
-EOF
+EOF;
 }

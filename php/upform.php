@@ -2,7 +2,7 @@
 require_once 'db_connect.php';
 session_start();
 include '../inc/head.php';
-render_header("../css/update.css");
+// render_header("../css/update.css");
 if(isset($_SESSION['null_error'])){
  echo $_SESSION['null_error'];
   unset($_SESSION['null_error']);
@@ -20,7 +20,7 @@ $data = array(
   );
 ?>
 <!-- <html> -->
-  <!-- <link rel="stylesheet" href="../css/update.css"> -->
+  <link rel="stylesheet" href="../css/update.css">
   <!-- <body> -->
     <main id="upform">
       <form action="update.php" method="post">

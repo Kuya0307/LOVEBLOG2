@@ -7,6 +7,7 @@ var_dump($_POST);
 echo "</pre>";
 $name = $_POST['name'];
 $pw = $_POST['pw'];
+// $agry = $_POST['agry'];
 $pw_hash = password_hash($pw,PASSWORD_DEFAULT);
 
 

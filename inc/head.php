@@ -1,6 +1,6 @@
 <?php
-function render_header($css_path) {
-  echo <<<EOF
+// function render_header($css_path) {
+//   echo <<<EOF
 if(!isset($_SESSION)){
   session_start();
 }
@@ -24,5 +24,5 @@ if(!isset($_SESSION)){
     </div>
     <button class="button" onclick="location.href='./logout.php'">ログアウト</button>
   </header>
-  EOF;
-}
+  <!-- EOF;
+} -->
