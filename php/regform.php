@@ -1,19 +1,24 @@
 <?php
 require_once 'db_connect.php';
 session_start();
+$reg_name = "";
+if(isset($_SESSION['reg_name'])){
+    $reg_name = $_SESSION['reg_name'];
+}
 include '../inc/headlog.php';
 // if(isset($_SESSION['err_reg'])){
 //     echo $_SESSION['err_reg'];
 //     unset($_SESSION['err_reg']);
 // }
 render_header("../css/reg.css");
+// var_dump($_SESSION['aa']);
 ?>
 <body>
     <main>
         <div class="aa">
     <div class="box">
         <h1 class="regtext">アカウント作成</h1>
-        <?php if(isset($_SESSION['err_reg'])){ ?>
+        <?php if(isset($_SESSION['err_reg']) || isset($_SESSION['err_regname']) || isset($_SESSION['err_ag']) || isset($_SESSION['err_pw'])){ ?>
         <div class="box-005">
             <br>
     <div>
@@ -24,15 +29,33 @@ render_header("../css/reg.css");
         アカウント作成失敗
     </div>
     <p class="err"><?php
-            echo $_SESSION['err_reg']; 
+        if(!empty($_SESSION['err_regname'])){
+            echo $_SESSION['err_regname'];
+        }
+
+        if(!empty($_SESSION['err_reg'])){
+            echo $_SESSION['err_reg'];
+        }
+
+        if(!empty($_SESSION['err_ag'])){
+            echo $_SESSION['err_ag'];
+        }
+
+        if(!empty($_SESSION['err_pw'])){
+            echo $_SESSION['err_pw'];
+        }
+            unset($_SESSION['err_regname']);
             unset($_SESSION['err_reg']);
+            unset($_SESSION['err_ag']);
+            unset($_SESSION['err_pw']);
         ?>
     </p>
     </div>
     <?php } ?>
         <form action="reg.php" method="post">
             <p class="name">name</p> 
-            <input type="text" name="name" class="namebox">
+            <input type="text" name="name" class="namebox" value="<?php echo $reg_name ?>" >
+            <?php  unset($_SESSION['reg_name']) ?>
             <p class="pw">パスワード</p>
             <input type="pw" name="pw" class="pwbox">
             <p><a href="rules.php">利用規約</a>と<a href="policy.php">プライバシーポリシー</a></p><p>に同意しますか？</p>
