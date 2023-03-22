@@ -77,7 +77,14 @@ if(isset( $_SESSION['result2'])){
             </label>
             </td>
             <td><a href="upform.php?ID={$data['ID']}"><img src="../img/ppen.png" width="40px" height="29px"></a></td>
-            <td><button class="del_btn" data-id="{$data['ID']}"><img src="../img/gomi.png" width="30px" height="30px"></button></td>
+            <td>
+            <dialog>
+                <p>この記事を本当に削除しますか？</p>
+                <a id="del_tag" href="javascript:void(0);" style="text-decoration:none;">削除</a>
+                <a href="table.php" style="text-decoration:none;">戻る</a>
+            </dialog>
+            <button class="del_btn" data-id="{$data['ID']}" value="{$data['ID']}"><img src="../img/gomi.png" width="30px" height="30px"></button>
+            </td>
             <td>{$data['create_at']}</td>
         </tr>
         EOD;
@@ -93,21 +100,19 @@ if(isset( $_SESSION['result2'])){
     // ダイアログ表示
     //var btn = document.getElementById('btn');
     //このHTMLに存在するすべてのdel_btnというクラスのついたボタンを取得
-    let btn = document.getElementsByClassName('del_btn')
+    let btn = document.getElementsByClassName('del_btn');
+    var dialog = document.querySelector('dialog');
+    var tag = document.getElementById('del_tag');
     //すべてのボタンにaddEventListenerを設定
     for(let i = 0; i < btn.length; i++){
         btn[i].addEventListener('click', function() {
-        var result2 = window.confirm('ボタンをクリック！');
-        console.log( $_SESSION['result2']);
-        if(  $_SESSION['result2'] ) {
-        //OKを押して遷移させる
-            window.location.href = "../php/delete.php?id="+btn[i].dataset.id;
-            // console.log("../php/delete.php?id="+btn[i].dataset.id)
-        }else {
-        //キャンセルを押してリダイレクトさせる
-            return false;
-        }
-    })
+            dialog.showModal();
+            tag.addEventListener("click",function(){
+                window.location.href = "../php/delete.php?id="+btn[i].dataset.id;
+        },false);
+    }, false);
+    
+       
     }
     // トグルボタン表示切替
     let checkbox = document.getElementsByClassName('up_state')
@@ -156,7 +161,14 @@ echo <<<"EOD"
         </label>
         </td>
         <td><a href="upform.php?ID={$data['ID']}"><img src="../img/ppen.png" width="40px" height="29px"></a></td>
-        <td><button class="del_btn" data-id="{$data['ID']}"><img src="../img/gomi.png" width="30px" height="30px"></button></td>
+        <td>
+            <dialog>
+                <p>この記事を本当に削除しますか？</p>
+                <a id="del_tag" href="javascript:void(0);" style="text-decoration:none;">削除</a>
+                <a href="table.php" style="text-decoration:none;">戻る</a>
+            </dialog>
+            <button class="del_btn" data-id="{$data['ID']}" value="{$data['ID']}"><img src="../img/gomi.png" width="30px" height="30px"></button>
+            </td>
         <td>{$data['create_at']}</td>
     </tr>
     EOD;
@@ -173,22 +185,20 @@ echo <<<"EOD"
 // ダイアログ表示
 //var btn = document.getElementById('btn');
 //このHTMLに存在するすべてのdel_btnというクラスのついたボタンを取得
-let btn = document.getElementsByClassName('del_btn')
+let btn = document.getElementsByClassName('del_btn');
+    var dialog = document.querySelector('dialog');
+    var tag = document.getElementById('del_tag');
 //すべてのボタンにaddEventListenerを設定
 for(let i = 0; i < btn.length; i++){
     btn[i].addEventListener('click', function() {
-    var result = window.confirm('ボタンをクリック！');
-    console.log(result);
-    if( result ) {
-    //OKを押して遷移させる
-        window.location.href = "../php/delete.php?id="+btn[i].dataset.id;
-        // console.log("../php/delete.php?id="+btn[i].dataset.id)
-    }else {
-    //キャンセルを押してリダイレクトさせる
-        return false;
+            dialog.showModal();
+            tag.addEventListener("click",function(){
+                window.location.href = "../php/delete.php?id="+btn[i].dataset.id;
+        },false);
+    }, false);
+    
+       
     }
-})
-}
 // トグルボタン表示切替
 let checkbox = document.getElementsByClassName('up_state')
 let id
@@ -269,7 +279,14 @@ for(let i= 0; i < checkbox.length; i++){
             </label>
             </td>
             <td><a href="upform.php?ID={$data['ID']}"><img src="../img/ppen.png" width="40px" height="29px"></a></td>
-            <td><button class="del_btn" data-id="{$data['ID']}"><img src="../img/gomi.png" width="30px" height="30px"></button></td>
+            <td>
+            <dialog>
+                <p>この記事を本当に削除しますか？</p>
+                <a id="del_tag" href="javascript:void(0);" style="text-decoration:none;">削除</a>
+                <a href="table.php" style="text-decoration:none;">戻る</a>
+            </dialog>
+            <button class="del_btn" data-id="{$data['ID']}" value="{$data['ID']}"><img src="../img/gomi.png" width="30px" height="30px"></button>
+            </td>
             <td>{$data['create_at']}</td>
         </tr>
         EOD;
@@ -286,21 +303,19 @@ for(let i= 0; i < checkbox.length; i++){
     // ダイアログ表示
     //var btn = document.getElementById('btn');
     //このHTMLに存在するすべてのdel_btnというクラスのついたボタンを取得
-    let btn = document.getElementsByClassName('del_btn')
+    let btn = document.getElementsByClassName('del_btn');
+    var dialog = document.querySelector('dialog');
+    var tag = document.getElementById('del_tag');
     //すべてのボタンにaddEventListenerを設定
     for(let i = 0; i < btn.length; i++){
         btn[i].addEventListener('click', function() {
-        var result = window.confirm('ボタンをクリック！');
-        console.log(result);
-        if( result ) {
-        //OKを押して遷移させる
-            window.location.href = "../php/delete.php?id="+btn[i].dataset.id;
-            // console.log("../php/delete.php?id="+btn[i].dataset.id)
-        }else {
-        //キャンセルを押してリダイレクトさせる
-            return false;
-        }
-    })
+            dialog.showModal();
+            tag.addEventListener("click",function(){
+                window.location.href = "../php/delete.php?id="+btn[i].dataset.id;
+        },false);
+    }, false);
+    
+       
     }
     // トグルボタン表示切替
     let checkbox = document.getElementsByClassName('up_state')
