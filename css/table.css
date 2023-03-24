@@ -108,6 +108,22 @@ span{
     color: #000000;
     /* border-radius: 5px; デザインによる */
   }
+  .sea_btn{
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    background: #AFEEEE;;
+    border:1px solid #0000FF;
+    color: #000000;
+  }
+  .iti_btn{
+    display: inline-block;
+    padding: 5px 40px;
+    text-decoration: none;
+    background: #AFEEEE;;
+    border:1px solid #0000FF;
+    color: #000000;
+  }
 
   .column{
       pointer-events: none;

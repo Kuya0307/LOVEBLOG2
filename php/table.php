@@ -4,10 +4,10 @@
     ?>
     <form action="search.php" method="get">
 <input type="search" name="search" placeholder="検索キーワードを入力してください">
-<input type="submit" name="submit" value="検索">
+<input type="submit" name="submit" class="sea_btn" value="検索">
 </form>
 <form action = "tmp.php" method = "post">
-   <input type ="submit" value="一覧へ戻る">
+   <input type ="submit" class = "iti_btn" value="一覧へ戻る">
    </form>
 <?php
     if(!isset($_SESSION)){

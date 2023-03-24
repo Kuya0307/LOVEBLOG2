@@ -51,7 +51,8 @@ if($gab){
   <form action="post2.php" method="post">
 <label for="story">タイトル</label>
 
-<input type="text" class="god" name="title"value="<?php echo $data['title'];?>" readonly><br>
+<!-- <input type="text" class="god" name="title"value="" readonly><br> -->
+<textarea name="title" id="god"  readonly><?php echo $data['title'];?></textarea>
 <!-- <textarea id="story" name="content"
       rows="30" cols="100" placeholder="投稿内容を入力してください。" readonly> -->
 <p class="cont"><?php echo $data['content'];?></p>
