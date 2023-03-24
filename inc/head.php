@@ -4,7 +4,9 @@
 if(!isset($_SESSION)){
   session_start();
 }
-  
+if(empty($_SESSION)){
+  header('Location:index.php');
+}
 ?>
 <!doctype html>
 <html lang="ja">
@@ -16,7 +18,7 @@ if(!isset($_SESSION)){
 </head>
 <body>
   <header>
-    <img class="aicon" src="../img/aicon.png" alt="">
+    <img class="aicon" src="../img/aicon1.png" alt="">
     <h1 class="title">JYOBILOVE</h1>
     <div class="use">
     <p class="user"><?php echo $_SESSION['name']; ?></p>
