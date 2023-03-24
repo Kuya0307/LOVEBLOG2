@@ -9,7 +9,7 @@ function render_header($css_path) {
   <link rel="stylesheet" href="../css/headout.css">
 </head>
   <header>
-    <img class="aicon" src="../img/aicon.png" alt="">
+    <img class="aicon" src="../img/aicon1.png" alt="">
     <h1 class="title">JYOBILOVE</h1>
     <button class="button" onclick="location.href='loginform.php'">ログイン</button>
   </header>
