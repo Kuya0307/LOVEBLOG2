@@ -1,6 +1,6 @@
 @charset "utf-8";
 body {
-    background-color:#f5c3c2;
+    background-color:#FDE5E3;
 }
 #post .txt{
     width: 80%;
@@ -8,6 +8,10 @@ body {
     margin-top: 3%;;
     margin-left: 7%;
     margin-right: 7%;
+    font-size: 50px;
+}
+#post #story{
+    font-size: 30px;
 }
 #post .txt2{
     width: 70%;

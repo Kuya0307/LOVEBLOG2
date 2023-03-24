@@ -1,6 +1,6 @@
 @charset "utf-8";
 body{
-    background-color: #F5C3C2;
+    background-color: #FDE5E3;
 }
 #upform .textbox{
     width: 80%;
@@ -8,6 +8,10 @@ body{
     margin-top: 3%;;
     margin-left: 7%;
     margin-right: 7%;
+    font-size: 32px;
+}
+#upform #story{
+ font-size: 32px;
 }
 #upform .input[type="text"]{
     font-size:xx-large;
